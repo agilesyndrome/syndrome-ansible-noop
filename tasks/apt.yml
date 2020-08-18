@@ -1,0 +1,29 @@
+---
+- name: Ensure dirmngr is installed (gnupg dependency).
+  apt:
+    name: dirmngr
+    state: present
+
+- name: Add Apt Key from URLs
+  shell: 
+    cmd: "curl -s {{ item }} | apt-key add -"
+  with_items: "{{ apt_key_urls }}"
+
+- name: Add Apt Repositories
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    update_cache: false
+  with_items: "{{ apt_repositories }}"
+      
+- name: Update apt Cache
+  apt: 
+    update_cache: yes
+    force_apt_get: yes
+
+- name: Install Apt Packages
+  apt:
+    name: "{{ apt_packages }}"
+    state: present
+    force_apt_get: yes
+

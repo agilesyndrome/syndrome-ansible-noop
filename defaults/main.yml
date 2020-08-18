@@ -1,0 +1,7 @@
+---
+# defaults file for syndrome-ansible-template
+foundation_supportroot: /workspace
+foundation_appuser: appbot
+apt_key_urls: []
+apt_repositories: []
+apt_packages: []

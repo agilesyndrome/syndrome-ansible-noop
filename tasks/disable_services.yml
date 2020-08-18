@@ -1,0 +1,6 @@
+- name: Stop and Disable all services
+  service:
+    name: "{{ service_list }}"
+    state: "stopped"
+    enabled: no
+  when: service_list is defined
