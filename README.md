@@ -6,7 +6,7 @@ This Ansible role does nothing. It's very useful when you need to have a galaxy.
 Example galaxy.yml file
 ```
 ---
-git+https://github.com/agilesyndrome/syndrome-ansible-noop
+- git+https://github.com/agilesyndrome/syndrome-ansible-noop
 ```
 
 Example Playbook
