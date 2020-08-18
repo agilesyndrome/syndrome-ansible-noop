@@ -11,14 +11,5 @@ platforms:
   - name: localhost
 provisioner:
   name: ansible
-  options:
-    vvv: True
-    extra-vars: |
-      packer_build_name=docker
-      packer_builder_type=docker
-      packer_http_addr=
-      created=byMolecule
-      image=##TODO##
-      aws_region=us-east-1
 verifier:
   name: ansible

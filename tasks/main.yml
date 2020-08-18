@@ -1,15 +1,2 @@
 ---
-# tasks file for syndrome-ansible-template
-- include_tasks: copy_files.yml
-- include_tasks: apt.yml
-  vars:
-    apt_key_urls:
-    apt_repositories:
-    apt_packages:
-
-
-- name: Ensure nginx service is running as configured.
-  service:
-    name: nginx
-    state: "stopped"
-    enabled: no
+# tasks file for syndrome-ansible-noop

@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include syndrome-##TODO##"
+    - name: "Include syndrome-ansible-noop"
       include_role:
-        name: "syndrome-##TODO##"
+        name: "syndrome-ansible-noop"
